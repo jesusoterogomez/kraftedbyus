@@ -337,6 +337,32 @@ header.site-header {
     color: #FFF; }
 
 @media only screen and (max-width: 769px) {
+  .header-content .branding {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    .header-content .branding:last-child {
+      margin-right: 0; }
+  .header-content nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    .header-content nav:last-child {
+      margin-right: 0; }
+  .header-content .pitch {
+    font-size: 10pt;
+    padding: 200px 0; }
+
   .section-1 article {
     float: left;
     display: block;

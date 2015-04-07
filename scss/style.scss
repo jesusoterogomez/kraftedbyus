@@ -227,6 +227,26 @@ header.site-header{
 
 // First media query trial w/ Neat column changes.
 @media only screen and (max-width: 769px) {
+	.header-content{
+		.branding{
+			@include span-columns(12);
+			float:none;
+			margin-left:auto;
+			margin-right:auto;
+			text-align: center;
+		}
+		nav{
+			@include span-columns(12);
+			float:none;
+			margin-left:auto;
+			margin-right:auto;
+			text-align: center;
+		}
+		.pitch{
+			font-size: 10pt;
+			padding:200px 0;
+		}
+	}
 	.section-1{
 		article{
 			@include span-columns(8);
