@@ -111,6 +111,9 @@ section{
 	}
 	input{
 		text-transform: none;
+		padding-left: 1em;
+		padding-right: 1em;
+		min-width: 200px;
 	}
 	.submit{
 		background: $color-highlight;
@@ -219,5 +222,16 @@ header.site-header{
 	h3{
 		padding-bottom: 1em;
 		color:$light;
+	}
+}
+
+// First media query trial w/ Neat column changes.
+@media only screen and (max-width: 769px) {
+	.section-1{
+		article{
+			@include span-columns(8);
+			@include shift(2);
+			margin-top: $row-padding;
+		}
 	}
 }
