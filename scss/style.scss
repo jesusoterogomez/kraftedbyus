@@ -2,8 +2,8 @@
 
 /* Imports */
 @import "reset";
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "../bourbon/bourbon";
+@import "../neat/neat";
 
 /* Color Scheme */
 $color-1: #57ab4a; // main green
@@ -132,6 +132,7 @@ section{
 header.site-header{
 	height: $header-height;
 	background: url(../img/header-bg.jpg);
+	background-size: cover;
 }
 
 .header-content{
@@ -219,6 +220,7 @@ header.site-header{
 .site-footer {
 	text-align: center;
 	background: url(../img/footer-bg.jpg);
+	background-size: cover;
 	h3{
 		padding-bottom: 1em;
 		color:$light;

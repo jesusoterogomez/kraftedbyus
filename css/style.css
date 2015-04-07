@@ -1,376 +1,66 @@
-@charset "UTF-8";
-/* Imports */
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-dialog,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-font,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-hr,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-meter,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video,
-xmp {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 100%; }
+/*
+Error: File to import not found or unreadable: bourbon/bourbon.
+       Load paths:
+         /Applications/MAMP/htdocs/personal/kraftedbyus/scss
+         /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 5 of /Applications/MAMP/htdocs/personal/kraftedbyus/scss/style.scss
 
-html,
-body {
-  height: 100%; }
+1: @charset "utf-8";
+2: 
+3: /* Imports *\/
+4: @import "reset";
+5: @import "bourbon/bourbon";
+6: @import "neat/neat";
+7: 
+8: /* Color Scheme *\/
+9: $color-1: #57ab4a; // main green
+10: $color-2: #cfe6d5; // hover
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-b,
-strong {
-  font-weight: bold; }
-
-img {
-  color: transparent;
-  font-size: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic; }
-
-ol,
-ul {
-  list-style: none;
-  padding-left: 0px; }
-
-li {
-  display: list-item; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-th,
-td,
-caption {
-  font-weight: normal;
-  vertical-align: top;
-  text-align: left; }
-
-q {
-  quotes: none; }
-
-q:before,
-q:after {
-  content: '';
-  content: none; }
-
-sub,
-sup,
-small {
-  font-size: 75%; }
-
-sub,
-sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-svg {
-  overflow: hidden; }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
-
-/* Color Scheme */
-body {
-  width: 100%;
-  font-size: 12pt;
-  font-family: sans-serif; }
-
-section {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  section::after {
-    clear: both;
-    content: "";
-    display: table; }
-  section .section-header {
-    padding-bottom: 5em; }
-    section .section-header .section-title {
-      font-size: 2em;
-      color: #4b4845; }
-    section .section-header .section-subtitle {
-      font-size: 1.2em;
-      color: #afafaf;
-      font-weight: normal; }
-
-.button, .button-borderless, .dropdown, .email-button input, .email-button button {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  padding: 0.6em 2.5em;
-  margin: 1em 0;
-  border-radius: 5px;
-  border: 2px solid #57ab4a;
-  color: #57ab4a;
-  background: #FFF;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  outline: 0;
-  font-weight: 700;
-  text-decoration: none; }
-  .button:hover, .button-borderless:hover, .dropdown:hover, .email-button input:hover, .email-button button:hover {
-    background: #cfe6d5; }
-
-.button-borderless, .dropdown, .email-button input, .email-button button {
-  border: none;
-  padding: 0.8em 2.5em; }
-
-.dropdown:after {
-  content: "˅";
-  display: inline;
-  position: relative;
-  margin-left: 5px; }
-
-.email-button {
-  display: inline-block;
-  margin-left: 1em; }
-  .email-button input {
-    text-transform: none;
-    padding-left: 1em;
-    padding-right: 1em;
-    min-width: 200px; }
-  .email-button .submit {
-    background: #57ab4a;
-    color: #FFF;
-    margin-left: -1em;
-    border-radius: 0 5px 5px 0;
-    padding-left: 1em;
-    padding-right: 1em; }
-    .email-button .submit:hover {
-      background: #57ab4a; }
-
-header.site-header {
-  height: 920px;
-  background: url(../img/header-bg.jpg); }
-
-.header-content {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .header-content::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .header-content .top {
-    padding-top: 50px; }
-  .header-content .branding {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    line-height: 3em; }
-    .header-content .branding:last-child {
-      margin-right: 0; }
-  .header-content nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%;
-    text-align: right;
-    line-height: 3em; }
-    .header-content nav:last-child {
-      margin-right: 0; }
-    .header-content nav a {
-      margin-left: 20px;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #FFF;
-      font-weight: 700;
-      border-bottom: 3px solid transparent;
-      padding-bottom: 0.2em; }
-      .header-content nav a:hover {
-        border-bottom: 3px solid #70df88; }
-  .header-content .pitch {
-    padding: 340px 0;
-    text-align: center;
-    color: #FFF; }
-    .header-content .pitch h1 {
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      font-size: 3em; }
-    .header-content .pitch h2 {
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-      font-size: 2em; }
-  .header-content .cta {
-    text-align: center; }
-
-.section-1 {
-  text-align: center;
-  padding: 5em 0; }
-  .section-1 article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    text-align: center; }
-    .section-1 article:last-child {
-      margin-right: 0; }
-    .section-1 article img {
-      width: 100%;
-      height: 200px; }
-    .section-1 article h2 {
-      padding-top: 1em; }
-    .section-1 article p {
-      padding: 1em 0; }
-
-.page-wrapper {
-  min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -6em; }
-
-.page-wrapper:after {
-  content: "";
-  display: block; }
-
-.site-footer, .page-wrapper:after {
-  padding: 3em 0; }
-
-.site-footer {
-  text-align: center;
-  background: url(../img/footer-bg.jpg); }
-  .site-footer h3 {
-    padding-bottom: 1em;
-    color: #FFF; }
-
-@media only screen and (max-width: 769px) {
-  .header-content .branding {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-    .header-content .branding:last-child {
-      margin-right: 0; }
-  .header-content nav {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-    .header-content nav:last-child {
-      margin-right: 0; }
-  .header-content .pitch {
-    font-size: 10pt;
-    padding: 200px 0; }
-
-  .section-1 article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
-    margin-top: 3em; }
-    .section-1 article:last-child {
-      margin-right: 0; } }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+/Applications/MAMP/htdocs/personal/kraftedbyus/scss/style.scss:5
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `call'
+/Library/Ruby/Gems/2.0.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: bourbon/bourbon.\A        Load paths:\A          /Applications/MAMP/htdocs/personal/kraftedbyus/scss\A          /Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 5 of /Applications/MAMP/htdocs/personal/kraftedbyus/scss/style.scss\A \A 1: @charset \"utf-8\";\A 2: \A 3: /* Imports */\A 4: @import \"reset\";\A 5: @import \"bourbon/bourbon\";\A 6: @import \"neat/neat\";\A 7: \A 8: /* Color Scheme */\A 9: $color-1: #57ab4a; // main green\A 10: $color-2: #cfe6d5; // hover"; }
