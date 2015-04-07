@@ -230,7 +230,10 @@ section {
   display: inline-block;
   margin-left: 1em; }
   .email-button input {
-    text-transform: none; }
+    text-transform: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    min-width: 200px; }
   .email-button .submit {
     background: #57ab4a;
     color: #FFF;
@@ -332,5 +335,14 @@ header.site-header {
   .site-footer h3 {
     padding-bottom: 1em;
     color: #FFF; }
+
+@media only screen and (max-width: 769px) {
+  .section-1 article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .section-1 article:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=style.css.map */
