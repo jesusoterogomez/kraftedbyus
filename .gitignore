@@ -2,6 +2,16 @@
 Thumbs.db
 ehthumbs.db
 
+# Node_modules
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+.DS_Store
+*.swp
+.sublime*
+
 # Folder config file
 Desktop.ini
 
