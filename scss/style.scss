@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* Imports */
 @import "reset";
 @import "bourbon/bourbon";
@@ -79,6 +81,18 @@ button{
 	}
 }
 
+// Dropdown (only button, without options)
+.dropdown{
+	@extend button;
+	border:none;
+	&:after{
+		content:"˅";
+		display: inline;
+		position: relative;
+		margin-left: 5px;
+	}
+}
+
 // Header
 header.site-header{
 	height: $header-height;
@@ -154,4 +168,29 @@ header.site-header{
 }
 
 
+// Sticky Footer
+
+.page-wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  // margin-bottom: -250px; 
+  margin-bottom:-($row-padding*2);
+}
+.page-wrapper:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrapper:after {
+  // height: 180px;
+  padding:$row-padding;
+}
+
 // Footer
+.site-footer {
+  text-align: center;
+  background: url(../img/footer-bg.jpg);
+  h3{
+	padding-bottom: 1em;
+	color:$light;
+  }
+}

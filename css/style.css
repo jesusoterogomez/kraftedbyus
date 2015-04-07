@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Imports */
 a,
 abbr,
@@ -198,7 +199,7 @@ section {
       color: #afafaf;
       font-weight: normal; }
 
-button {
+button, .dropdown {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -210,8 +211,16 @@ button {
   text-transform: uppercase;
   outline: 0;
   font-weight: 700; }
-  button:hover {
+  button:hover, .dropdown:hover {
     background: #cfe6d5; }
+
+.dropdown {
+  border: none; }
+  .dropdown:after {
+    content: "˅";
+    display: inline;
+    position: relative;
+    margin-left: 5px; }
 
 header.site-header {
   height: 920px;
@@ -266,7 +275,7 @@ header.site-header {
       font-size: 2em; }
   .header-content .cta {
     text-align: center; }
-    .header-content .cta button {
+    .header-content .cta button, .header-content .cta .dropdown {
       border: none; }
 
 .section-1 {
@@ -287,5 +296,24 @@ header.site-header {
       padding-top: 1em; }
     .section-1 article p {
       padding: 1em 0; }
+
+.page-wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -6em; }
+
+.page-wrapper:after {
+  content: "";
+  display: block; }
+
+.site-footer, .page-wrapper:after {
+  padding: 3em; }
+
+.site-footer {
+  text-align: center;
+  background: url(../img/footer-bg.jpg); }
+  .site-footer h3 {
+    padding-bottom: 1em;
+    color: #FFF; }
 
 /*# sourceMappingURL=style.css.map */
