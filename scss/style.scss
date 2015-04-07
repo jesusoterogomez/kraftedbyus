@@ -12,7 +12,7 @@ $color-3: #70df88; // link underline
 $color-4: #64615f; // paragraph
 $color-5: #4b4845; // title
 $color-6: #afafaf; // subtitle
-$light: #FFF;
+$light:   #FFF;
 
 // Base Theme
 $color-highlight: $color-1;
@@ -37,6 +37,7 @@ $section-title:      2em;
 $section-subtitle:   1.2em;
 $button-padding:     0.6em 2.5em;
 $button-alt-padding: 0.8em 2.5em;
+$button-size:        0.8em;
 
 // Defaults
 body{
@@ -67,14 +68,14 @@ section{
 
 .button{
 	@include transition( all 0.3s );
-	padding:0.6em 2.5em;
+	padding: $button-padding;
 	margin: 1em 0;
 	border-radius:$border-radius;
 	border:2px solid $color-highlight;
 	color:$color-highlight;
 	background: $light;
 	text-transform: uppercase;
-	font-size: .8em;
+	font-size: $button-size;
 	outline: 0;
 	font-weight: 700;
 	text-decoration: none;
@@ -83,17 +84,44 @@ section{
 	}
 }
 
-// Dropdown (only button, without options)
-.dropdown{
+.button-borderless{
 	@extend .button;
 	border:none;
-	padding: 0.8em 2.5em;
+	padding: $button-alt-padding;
+}
+
+// Dropdown (only button, without options)
+.dropdown{
+	@extend .button-borderless;
 	&:after{
 		content:"˅";
 		display: inline;
 		position: relative;
 		margin-left: 5px;
 
+	}
+}
+
+// Input Button
+.email-button{
+	display: inline-block;
+	margin-left: 1em;
+	input, button{
+		@extend .button-borderless;
+	}
+	input{
+		text-transform: none;
+	}
+	.submit{
+		background: $color-highlight;
+		color: $light;
+		margin-left:-1em;
+		border-radius: 0 $border-radius $border-radius 0;
+		padding-left:1em;
+		padding-right:1em;
+		&:hover{
+			background: $color-highlight;
+		}
 	}
 }
 
@@ -145,10 +173,6 @@ header.site-header{
 	}
 	.cta{
 		text-align: center;
-		.button{
-			border: none;
-			padding: 0.8em 2.5em;
-		}
 	}
 }
 
@@ -177,15 +201,15 @@ header.site-header{
 
 .page-wrapper {
 	min-height: 100%;
-  /* equal to footer height */
-  margin-bottom:-($row-padding*2); //accounts for both top and bottom padding.
+    /* equal to footer height */
+    margin-bottom:-($row-padding*2); //accounts for both top and bottom padding.
 }
 .page-wrapper:after {
 	content: "";
 	display: block;
 }
 .site-footer, .page-wrapper:after {
-  padding:$row-padding 0;
+	padding:$row-padding 0;
 }
 
 // Footer

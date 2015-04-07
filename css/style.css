@@ -175,7 +175,6 @@ html {
   box-sizing: inherit; }
 
 /* Color Scheme */
-/* Sizing */
 body {
   width: 100%;
   font-size: 12pt;
@@ -199,7 +198,7 @@ section {
       color: #afafaf;
       font-weight: normal; }
 
-.button, .dropdown {
+.button, .button-borderless, .dropdown, .email-button input, .email-button button {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -210,21 +209,37 @@ section {
   color: #57ab4a;
   background: #FFF;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: 0.8em;
   outline: 0;
   font-weight: 700;
   text-decoration: none; }
-  .button:hover, .dropdown:hover {
+  .button:hover, .button-borderless:hover, .dropdown:hover, .email-button input:hover, .email-button button:hover {
     background: #cfe6d5; }
 
-.dropdown {
+.button-borderless, .dropdown, .email-button input, .email-button button {
   border: none;
   padding: 0.8em 2.5em; }
-  .dropdown:after {
-    content: "˅";
-    display: inline;
-    position: relative;
-    margin-left: 5px; }
+
+.dropdown:after {
+  content: "˅";
+  display: inline;
+  position: relative;
+  margin-left: 5px; }
+
+.email-button {
+  display: inline-block;
+  margin-left: 1em; }
+  .email-button input {
+    text-transform: none; }
+  .email-button .submit {
+    background: #57ab4a;
+    color: #FFF;
+    margin-left: -1em;
+    border-radius: 0 5px 5px 0;
+    padding-left: 1em;
+    padding-right: 1em; }
+    .email-button .submit:hover {
+      background: #57ab4a; }
 
 header.site-header {
   height: 920px;
@@ -279,9 +294,6 @@ header.site-header {
       font-size: 2em; }
   .header-content .cta {
     text-align: center; }
-    .header-content .cta .button, .header-content .cta .dropdown {
-      border: none;
-      padding: 0.8em 2.5em; }
 
 .section-1 {
   text-align: center;
@@ -312,7 +324,7 @@ header.site-header {
   display: block; }
 
 .site-footer, .page-wrapper:after {
-  padding: 3em; }
+  padding: 3em 0; }
 
 .site-footer {
   text-align: center;
