@@ -37,10 +37,3 @@ Your app should now be running on [localhost:8080](http://localhost:8080/).
 ####Monitored code changes
 All code is being monitored by Gulp's `watch` task and will be reloaded in the browser automatically when a file within the project is edited locally.  
 
-
-This task will generate a folder called `dist` where the compiled and optimized application is generated.
-
-## Copy to Production
-
-The `dist` folder contains all compiled code and images, and is ready to be served from a production server. 
-Upload the contents of this folder to an accesible web directory using any deployment method of your choosing.
