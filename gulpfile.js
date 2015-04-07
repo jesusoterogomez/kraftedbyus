@@ -21,15 +21,6 @@ gulp.task('watch', function() {
   gulp.watch('/img/**', ['media'])
 });
 
-// // Sass Task
-// gulp.task('sass', function() {
-//   return gulp.src('scss/**/*')
-//   .pipe(sass())
-//     // .on('error', logError)
-//     .pipe(gulp.dest(dir_build+'/css'))
-//     .pipe(connect.reload());
-//   });
-
 gulp.task('sass', function() {
   return sass('scss/') 
   .on('error', function (err) {
