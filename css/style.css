@@ -1,0 +1,291 @@
+/* Imports */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+html,
+body {
+  height: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+b,
+strong {
+  font-weight: bold; }
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+ol,
+ul {
+  list-style: none;
+  padding-left: 0px; }
+
+li {
+  display: list-item; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left; }
+
+q {
+  quotes: none; }
+
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+sub,
+sup,
+small {
+  font-size: 75%; }
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+svg {
+  overflow: hidden; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* Color Scheme */
+/* Sizing */
+body {
+  width: 100%;
+  font-size: 12pt;
+  font-family: sans-serif; }
+
+section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  section::after {
+    clear: both;
+    content: "";
+    display: table; }
+  section .section-header {
+    padding-bottom: 5em; }
+    section .section-header .section-title {
+      font-size: 2em;
+      color: #4b4845; }
+    section .section-header .section-subtitle {
+      font-size: 1.2em;
+      color: #afafaf;
+      font-weight: normal; }
+
+button {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 0.8em 2.5em;
+  border-radius: 5px;
+  border: 3px solid #57ab4a;
+  color: #57ab4a;
+  background: #FFF;
+  text-transform: uppercase;
+  outline: 0;
+  font-weight: 700; }
+  button:hover {
+    background: #cfe6d5; }
+
+header.site-header {
+  height: 920px;
+  background: url(../img/header-bg.jpg); }
+
+.header-content {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .header-content::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .header-content .top {
+    padding-top: 50px; }
+  .header-content .branding {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    line-height: 3em; }
+    .header-content .branding:last-child {
+      margin-right: 0; }
+  .header-content nav {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    text-align: right;
+    line-height: 3em; }
+    .header-content nav:last-child {
+      margin-right: 0; }
+    .header-content nav a {
+      margin-left: 20px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #FFF;
+      font-weight: 700;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 0.2em; }
+      .header-content nav a:hover {
+        border-bottom: 3px solid #70df88; }
+  .header-content .pitch {
+    padding: 340px 0;
+    text-align: center;
+    color: #FFF; }
+    .header-content .pitch h1 {
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      font-size: 3em; }
+    .header-content .pitch h2 {
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      font-size: 2em; }
+  .header-content .cta {
+    text-align: center; }
+    .header-content .cta button {
+      border: none; }
+
+.section-1 {
+  text-align: center;
+  padding: 5em 0; }
+  .section-1 article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    text-align: center; }
+    .section-1 article:last-child {
+      margin-right: 0; }
+    .section-1 article img {
+      width: 100%;
+      height: 200px; }
+    .section-1 article h2 {
+      padding-top: 1em; }
+    .section-1 article p {
+      padding: 1em 0; }
+
+/*# sourceMappingURL=style.css.map */

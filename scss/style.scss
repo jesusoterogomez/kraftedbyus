@@ -1,0 +1,157 @@
+/* Imports */
+@import "reset";
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+/* Color Scheme */
+$color-1: #57ab4a; // main green
+$color-2: #cfe6d5; // hover
+$color-3: #70df88; // link underline
+$color-4: #64615f; // paragraph
+$color-5: #4b4845; // title
+$color-6: #afafaf; // subtitle
+$light: #FFF;
+
+// Base Theme
+$color-highlight: $color-1;
+$color-buttons:   $color-1;
+$color-hover:     $color-2;
+$color-underline: $color-3;
+$color-text:      $color-4;
+$color-title:     $color-5;  
+$color-subtitle:  $color-6;  
+
+// Default Font Sizes
+$default-font-size: 12pt;
+$title-size:        3em;
+$subtitle-size:     2em;
+$paragraph-size:    1.2em;
+$popup-size:        0.8em;
+$row-padding : 3em;
+$section-padding : 5em;
+$section-title-size:        2em;
+$section-subtitle-size:     1.2em;
+$border-radius:5px;
+$row-height: 3em;
+
+/* Sizing */
+$header-height: 920px;
+
+// Defaults
+body{
+	@include fill-parent;
+	font-size: $default-font-size;
+	font-family:sans-serif;
+}
+
+section{
+	@include outer-container;
+	.section-header{
+		padding-bottom: $section-padding;
+		.section-title{
+			font-size: $section-title-size;
+			color: $color-title;
+
+		}
+		.section-subtitle{
+			font-size: $section-subtitle-size;
+			color: $color-subtitle;
+			font-weight: normal;
+		}
+	}
+}
+
+
+// Default Buttons
+
+button{
+	@include transition( all 0.3s );
+	padding:0.8em 2.5em;
+	border-radius:$border-radius;
+	border:3px solid $color-highlight;
+	color:$color-highlight;
+	background: $light;
+	text-transform: uppercase;
+	outline: 0;
+	font-weight: 700;
+	&:hover{
+		background: $color-hover;
+	}
+}
+
+// Header
+header.site-header{
+	height: $header-height;
+	background: url(../img/header-bg.jpg);
+}
+
+.header-content{
+	@include outer-container;
+	.top{
+		padding-top: 50px;
+	}
+	.branding{
+		@include span-columns(3);
+		line-height: $row-height;
+	}
+	nav{
+		@include span-columns(9);
+		text-align: right;
+		line-height: $row-height;
+		a{
+			margin-left: 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color:$light;
+			font-weight: 700;
+			border-bottom: 3px solid transparent;
+			padding-bottom: 0.2em; // offset hover underline
+			&:hover{
+				border-bottom: 3px solid $color-underline;
+			}
+		}
+	}
+	.pitch{
+		padding:340px 0;
+		text-align: center;
+		color:$light;
+		h1{
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+			font-size: $title-size;
+		}
+		h2{
+			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+			font-size: $subtitle-size;
+		}
+	}
+	.cta{
+		text-align: center;
+		button{
+			border: none;
+		}
+	}
+}
+
+// Section 1
+.section-1{
+	text-align: center;
+	padding:$section-padding 0;
+	article{
+		@include span-columns(4);
+		text-align: center;
+		img{
+			@include fill-parent;
+			height: 200px;
+		}
+		h2{
+			padding-top: 1em;
+		}
+		p{
+		padding: 1em 0;
+		}
+	}
+}
+
+
+// Footer
