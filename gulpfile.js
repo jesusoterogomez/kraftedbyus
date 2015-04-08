@@ -11,7 +11,7 @@ var dir_build = 'build/',
 dir_dist  = 'dist/';
 
 // Build tasks
-gulp.task('build', ['html', 'sass', 'media', 'watch']);
+gulp.task('build', ['html', 'sass', 'media', 'scripts', 'watch']);
 gulp.task('build:dist', ['html:dist', 'styles:dist', 'watch']);
 
 // Watch task
@@ -43,6 +43,12 @@ gulp.task('html', function() {
 gulp.task('media', function(){
   return gulp.src('img/**')
   .pipe(gulp.dest(dir_build + '/img'));
+});
+
+// Scripts
+gulp.task('scripts', function(){
+  return gulp.src('js/**')
+  .pipe(gulp.dest(dir_build + '/js'));
 });
 
 // Open a web browser window
