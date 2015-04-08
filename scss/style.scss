@@ -66,6 +66,7 @@ section{
 			font-weight: normal;
 		}
 	}
+
 }
 
 
@@ -142,6 +143,13 @@ header.site-header{
 
 .header-content{
 	@include outer-container;
+	@include media($large) {
+		padding: 0 $section-padding;	
+	}
+	@include media($small) {
+		padding-left:1em;	
+		padding-right:1em;	
+	}
 	.top{
 		padding-top: 50px;
 	}
@@ -180,6 +188,8 @@ header.site-header{
 			margin-right:auto;
 			text-align: center;
 		}
+
+
 	}
 	.pitch{
 		padding:340px 0;
@@ -228,6 +238,14 @@ header.site-header{
 			@include shift(1);
 			margin-top: $row-padding;
 		}
+	}
+	@include media($large) {
+		padding-left:$section-padding;	
+		padding-right:$section-padding;	
+	}
+	@include media($small) {
+		padding-left: 1em;	
+		padding-right:1em;	
 	}
 }
 
