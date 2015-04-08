@@ -39,6 +39,11 @@ $button-padding:     0.6em 2.5em;
 $button-alt-padding: 0.8em 2.5em;
 $button-size:        0.8em;
 
+// Neat Breakpoints
+$small:  new-breakpoint(max-width 480px 6);
+$medium: new-breakpoint(max-width 769px 8);
+$large:  new-breakpoint(max-width 1280px 12);
+
 // Defaults
 body{
 	@include fill-parent;
@@ -143,6 +148,14 @@ header.site-header{
 	.branding{
 		@include span-columns(3);
 		line-height: $row-height;
+
+		@include media($medium) {
+			@include span-columns(8);
+			float:none;
+			margin-left:auto;
+			margin-right:auto;
+			text-align: center;
+		}
 	}
 	nav{
 		@include span-columns(9);
@@ -160,6 +173,13 @@ header.site-header{
 				border-bottom: 3px solid $color-underline;
 			}
 		}
+		@include media($medium) {
+			@include span-columns(8);
+			float:none;
+			margin-left:auto;
+			margin-right:auto;
+			text-align: center;
+		}
 	}
 	.pitch{
 		padding:340px 0;
@@ -173,6 +193,10 @@ header.site-header{
 		h2{
 			text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 			font-size: $subtitle-size;
+		}
+		@include media($medium) {
+			font-size: 10pt;
+			padding:200px 0;
 		}
 	}
 	.cta{
@@ -189,13 +213,20 @@ header.site-header{
 		text-align: center;
 		img{
 			@include fill-parent;
-			height: 200px;
+			// height: 200px;
+			height:auto;
 		}
 		h2{
 			padding-top: 1em;
 		}
 		p{
 			padding: 1em 0;
+		}
+
+		@include media($medium) {
+			@include span-columns(6);
+			@include shift(1);
+			margin-top: $row-padding;
 		}
 	}
 }
@@ -224,36 +255,5 @@ header.site-header{
 	h3{
 		padding-bottom: 1em;
 		color:$light;
-	}
-}
-
-// First media query trial w/ Neat column changes.
-@media only screen and (max-width: 769px) {
-	.header-content{
-		.branding{
-			@include span-columns(12);
-			float:none;
-			margin-left:auto;
-			margin-right:auto;
-			text-align: center;
-		}
-		nav{
-			@include span-columns(12);
-			float:none;
-			margin-left:auto;
-			margin-right:auto;
-			text-align: center;
-		}
-		.pitch{
-			font-size: 10pt;
-			padding:200px 0;
-		}
-	}
-	.section-1{
-		article{
-			@include span-columns(8);
-			@include shift(2);
-			margin-top: $row-padding;
-		}
 	}
 }

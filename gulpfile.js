@@ -1,10 +1,10 @@
 // Gulp modules
 var gulp    = require('gulp'),
-sass    = require('gulp-ruby-sass'),
-connect = require('gulp-connect'),
-path    = require('path'),
-open    = require('gulp-open'),
-clean   = require('gulp-clean');
+    sass    = require('gulp-ruby-sass'),
+    connect = require('gulp-connect'),
+    path    = require('path'),
+    open    = require('gulp-open'),
+    clean   = require('gulp-clean');
 
 // Directories
 var dir_build = 'build/',
